@@ -1,0 +1,59 @@
+I"�<hr />
+<!--more-->
+
+<h3 id="what-is-it">What is it?</h3>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">	<span class="n">gem</span> <span class="s1">'turbolinks'</span></code></pre></figure>
+
+<p>“This is a gem that works similar to pjax, but instead of worrying about what element on the page to replace, and tailoring the server-side response to fit, we replace the entire body. This means that you get the bulk of the speed benefits from pjax (no recompiling of the JavaScript or CSS) without having to tailor the server-side response. It just works.”</p>
+
+<h3 id="pjax">PJAX</h3>
+<p>Uses AJAX and PushState to deliver a faster browsing experience by only loading and updating parts of the page HTML each page load. PushState makes it possible to add real permalinks, page titles, and a working back button so that your visitors won’t be able to tell the difference between PJAX page load and ordinary full page loads.</p>
+
+<p><a href="http://www.youtube.com/watch?v=CKv9C2qUL-8" title="Title">Tutorial</a></p>
+
+<h3 id="using-the-gem">Using the gem</h3>
+<p>Gemfile:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">	<span class="n">gem</span> <span class="s1">'turbolinks'</span></code></pre></figure>
+
+<p>Add this line on app/assets/javascripts/application.js:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">	<span class="sr">//</span><span class="o">=</span> <span class="nb">require</span> <span class="n">turbolinks</span></code></pre></figure>
+
+<p>app/views/layouts/application.html.erb:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="sx">%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" =</span><span class="o">&gt;</span> <span class="kp">true</span> <span class="sx">%&gt;
+&lt;%= javascript_include_tag "application", "data-turbolinks-track" =&gt;</span> <span class="kp">true</span> <span class="sx">%&gt;</span></code></pre></figure>
+
+<p>If you wont use Turbolink in some link, you can manually exclude:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">"/examples"</span> <span class="n">data</span><span class="o">-</span><span class="n">no</span><span class="o">-</span><span class="n">turbolink</span><span class="o">&gt;</span><span class="no">Examples</span><span class="o">&lt;</span><span class="sr">/a&gt;</span></code></pre></figure>
+
+<p>“With Turbolinks pages will change without a full reload, so you can’t rely on DOMContentLoaded or jQuery.ready() to trigger your code. Instead Turbolinks fires events on document to provide hooks into the lifecycle of the page.”
+Runtime Dependencies coffee-rails, but if you want use javascript.You can manually download and compile the turbolinks.js.coffee to JavaScript.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">ready</span> <span class="o">=</span> <span class="o">-&gt;</span>
+
+  <span class="o">...</span><span class="n">your</span> <span class="n">coffeescript</span> <span class="n">goes</span> <span class="n">here</span><span class="o">...</span>
+
+<span class="err">$</span><span class="p">(</span><span class="n">document</span><span class="p">).</span><span class="nf">ready</span><span class="p">(</span><span class="n">ready</span><span class="p">)</span>
+<span class="err">$</span><span class="p">(</span><span class="n">document</span><span class="p">).</span><span class="nf">on</span><span class="p">(</span><span class="s1">'page:load'</span><span class="p">,</span> <span class="n">ready</span><span class="p">)</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">var</span> <span class="n">ready</span><span class="p">;</span>
+<span class="n">ready</span> <span class="o">=</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+
+  <span class="o">...</span><span class="n">your</span> <span class="n">javascript</span> <span class="n">goes</span> <span class="n">here</span><span class="o">...</span>
+
+<span class="p">};</span>
+
+<span class="err">$</span><span class="p">(</span><span class="n">document</span><span class="p">).</span><span class="nf">ready</span><span class="p">(</span><span class="n">ready</span><span class="p">);</span>
+<span class="err">$</span><span class="p">(</span><span class="n">document</span><span class="p">).</span><span class="nf">on</span><span class="p">(</span><span class="s1">'page:load'</span><span class="p">,</span> <span class="n">ready</span><span class="p">);</span></code></pre></figure>
+
+<h3 id="links">Links</h3>
+<p><a href="https://github.com/rails/turbolinks" title="Turbolinks Project">Turbolinks Project</a></p>
+
+<p><a href="http://railscasts.com/episodes/390-turbolinks" title="Railscasts Turbolinks">Railscasts Turbolinks</a></p>
+
+<hr />
+:ET

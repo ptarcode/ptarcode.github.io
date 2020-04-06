@@ -1,0 +1,134 @@
+I"�+<hr />
+
+<!--more-->
+<p><a href="http://badge.fury.io/rb/previsao-clima-tempo"><img src="https://badge.fury.io/rb/previsao-clima-tempo.png" alt="Gem Version" /></a></p>
+
+<p>Communication with Clima Tempo accessing information about the weather of Brazil.</p>
+
+<h2 id="installation">Installation</h2>
+
+<p>Add this line to your application’s Gemfile:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    <span class="n">gem</span> <span class="s1">'previsao-clima-tempo'</span></code></pre></figure>
+
+<p>And then execute:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    <span class="err">$</span> <span class="n">bundle</span></code></pre></figure>
+
+<p>Or install it yourself as:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    <span class="err">$</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">previsao</span><span class="o">-</span><span class="n">clima</span><span class="o">-</span><span class="n">tempo</span></code></pre></figure>
+
+<h2 id="usage">Usage</h2>
+
+<h3 id="from-webservice">From Webservice</h3>
+<h5 id="new">.new</h5>
+<p>Instantiating a object.The city code should be informed.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">PrevisaoClimaTempo</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="ss">:codCity</span> <span class="o">=&gt;</span> <span class="s1">'3156'</span><span class="p">)</span>
+     </code></pre></figure>
+
+<h5 id="now">.now</h5>
+<p>Returns an object PrevisaoDia with information from the current day.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">     <span class="no">PrevisaoClimaTempo</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="ss">:codCity</span> <span class="o">=&gt;</span> <span class="s1">'3156'</span><span class="p">).</span><span class="nf">now</span>
+     </code></pre></figure>
+
+<h5 id="tomorrow">.tomorrow</h5>
+<p>Returns an object PrevisaoDia with information the next day.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">     <span class="no">PrevisaoClimaTempo</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="ss">:codCity</span> <span class="o">=&gt;</span> <span class="s1">'3156'</span><span class="p">).</span><span class="nf">tomorrow</span>
+     </code></pre></figure>
+
+<h5 id="days">.days</h5>
+<p>Returns a collection of objects PrevisaoDia with information of days referenced.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">     <span class="no">PrevisaoClimaTempo</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="ss">:codCity</span> <span class="o">=&gt;</span> <span class="s1">'3156'</span><span class="p">).</span><span class="nf">days</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span> <span class="n">maximum</span> <span class="n">of</span> <span class="mi">13</span> <span class="n">days</span> <span class="n">from</span> <span class="n">the</span> <span class="n">current</span> <span class="n">day</span>
+     </code></pre></figure>
+
+<h5 id="day">.day</h5>
+<p>Returns an object PrevisaoDia with information the day referenced.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">     <span class="no">PrevisaoClimaTempo</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="ss">:codCity</span> <span class="o">=&gt;</span> <span class="s1">'3156'</span><span class="p">).</span><span class="nf">day</span><span class="p">(</span><span class="n">date</span><span class="p">)</span>
+     </code></pre></figure>
+
+<h3 id="from-page">From Page</h3>
+<h4 id="contains-more-information-than-is-extracted-from-the-webservice">(contains more information than is extracted from the webservice)</h4>
+<h5 id="nowfrompage">.nowFromPage</h5>
+<p>Returns a hash of condtions of weather from page</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">	 <span class="no">PrevisaoClimaTempo</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="ss">:codCity</span> <span class="o">=&gt;</span> <span class="s1">'314'</span><span class="p">).</span><span class="nf">nowFromPage</span>
+	 </code></pre></figure>
+
+<p>return:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">	 <span class="p">{</span>
+		<span class="ss">:last_update</span><span class="p">:</span> <span class="mi">18</span><span class="p">:</span><span class="mo">00</span>
+		<span class="ss">:wind</span><span class="p">:</span>
+		  <span class="ss">:velocity</span><span class="p">:</span> <span class="mi">3</span> <span class="no">Km</span><span class="o">/</span><span class="n">h</span>
+		  <span class="ss">:direction</span><span class="p">:</span> <span class="no">Su</span><span class="o">-</span><span class="n">sudeste</span>
+		<span class="ss">:moisture</span><span class="p">:</span> <span class="mi">91</span><span class="o">%</span>
+		<span class="ss">:condition</span><span class="p">:</span> <span class="no">Poucas</span> <span class="n">nuvens</span>
+		<span class="ss">:pression</span><span class="p">:</span> <span class="mi">1022</span> <span class="n">hPa</span>
+		<span class="ss">:temperature</span><span class="p">:</span> <span class="mi">13</span><span class="err">º</span><span class="no">C</span>  
+ 	 <span class="p">}</span>
+ 	 </code></pre></figure>
+
+<h5 id="fullfrompage">.fullFromPage</h5>
+<p>Returns a hash of condtions of weather whith 5 days from page.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">  	 <span class="no">PrevisaoClimaTempo</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="ss">:codCity</span> <span class="o">=&gt;</span> <span class="s1">'314'</span><span class="p">).</span><span class="nf">fullFromPage</span>
+  	 </code></pre></figure>
+
+<p>return:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">	 <span class="p">{</span>
+		<span class="mi">1</span><span class="p">:</span>
+		  <span class="ss">:last_update</span><span class="p">:</span> <span class="mi">19</span><span class="p">:</span><span class="mo">00</span>
+		  <span class="ss">:date</span><span class="p">:</span> <span class="no">S</span><span class="err">á</span><span class="n">bado</span><span class="p">,</span> <span class="mi">17</span><span class="o">/</span><span class="mi">08</span><span class="o">/</span><span class="mi">2013</span>
+		  <span class="ss">:condition</span><span class="p">:</span> <span class="no">Sol</span> <span class="n">com</span> <span class="n">muitas</span> <span class="n">nuvens</span> <span class="n">durante</span> <span class="n">o</span> <span class="n">dia</span> <span class="n">e</span> <span class="n">per</span><span class="err">í</span><span class="n">odos</span> <span class="n">de</span> <span class="n">c</span><span class="err">é</span><span class="n">u</span> <span class="n">nublado</span><span class="o">.</span> <span class="no">Noite</span>
+		    <span class="n">com</span> <span class="n">muitas</span> <span class="n">nuvens</span><span class="o">.</span>
+		  <span class="ss">:wind</span><span class="p">:</span>
+		    <span class="ss">:velocity</span><span class="p">:</span> <span class="mi">6</span><span class="n">km</span><span class="o">/</span><span class="n">h</span>
+		    <span class="ss">:direction</span><span class="p">:</span> <span class="no">Su</span><span class="o">-</span><span class="n">sudeste</span>
+		  <span class="ss">:probability_of_precipitation</span><span class="p">:</span>
+		    <span class="ss">:volume</span><span class="p">:</span> <span class="mi">0</span><span class="n">mm</span>
+		    <span class="ss">:percentage</span><span class="p">:</span> <span class="mi">0</span><span class="o">%</span>
+		  <span class="ss">:moisture_relative_complete</span><span class="p">:</span>
+		    <span class="ss">:max</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span>
+		    <span class="ss">:min</span><span class="p">:</span> <span class="mi">49</span><span class="o">%</span>
+		  <span class="ss">:temperature</span><span class="p">:</span>
+		    <span class="ss">:max</span><span class="p">:</span> <span class="mi">16</span><span class="err">º</span>
+		    <span class="ss">:min</span><span class="p">:</span> <span class="mi">7</span><span class="err">º</span>
+		  <span class="ss">:uv</span><span class="p">:</span> <span class="no">Alto</span>
+		  <span class="ss">:sunrise</span><span class="p">:</span> <span class="mo">06</span><span class="n">h13</span>
+		  <span class="ss">:sunset</span><span class="p">:</span> <span class="mi">17</span><span class="n">h36</span>
+		<span class="mi">2</span><span class="p">:</span> <span class="o">...</span>
+ 	 <span class="p">}</span>
+ 	 </code></pre></figure>
+
+<h5 id="trendsfrompage">.trendsFromPage</h5>
+<p>Returns a hash of condtions of weather whith 5 days from page.
+If today is 16-12-2013 returns 21,22,23,24,25 trends.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">  	 <span class="no">PrevisaoClimaTempo</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="ss">:codCity</span> <span class="o">=&gt;</span> <span class="s1">'314'</span><span class="p">).</span><span class="nf">trendsFromPage</span>
+  	 </code></pre></figure>
+
+<p>return:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">	 <span class="p">{</span>
+		<span class="mi">1</span><span class="p">:</span>
+		  <span class="ss">:date</span><span class="p">:</span> <span class="no">Quinta</span><span class="o">-</span><span class="no">Feira</span><span class="p">,</span> <span class="mi">22</span><span class="o">/</span><span class="mi">08</span><span class="o">/</span><span class="mi">2013</span>
+		  <span class="ss">:condition</span><span class="p">:</span> <span class="no">Sol</span> <span class="n">com</span> <span class="n">algumas</span> <span class="n">nuvens</span><span class="o">.</span> <span class="no">N</span><span class="err">ã</span><span class="n">o</span> <span class="n">chove</span><span class="o">.</span>
+		  <span class="ss">:probability_of_precipitation</span><span class="p">:</span>
+		    <span class="ss">:volume</span><span class="p">:</span> <span class="mi">0</span><span class="n">mm</span>
+		    <span class="ss">:percentage</span><span class="p">:</span> <span class="mi">0</span><span class="o">%</span>
+		  <span class="ss">:temperature</span><span class="p">:</span>
+		    <span class="ss">:max</span><span class="p">:</span> <span class="mi">23</span><span class="err">º</span>
+		    <span class="ss">:min</span><span class="p">:</span> <span class="mi">7</span><span class="err">º</span>
+		<span class="mi">2</span><span class="p">:</span> 
+ 	 <span class="p">}</span>
+ 	 </code></pre></figure>
+
+<hr />
+:ET

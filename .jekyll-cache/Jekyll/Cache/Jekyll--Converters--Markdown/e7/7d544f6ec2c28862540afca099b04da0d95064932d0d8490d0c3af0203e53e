@@ -1,0 +1,78 @@
+I"<hr />
+<!--more-->
+
+<h2 id="blocks">Blocks</h2>
+<p>Writing methods that can accept blocks is simple. There’s no special syntax needed, you can simply write the method as you would any other. To call any block passed to the method, use the yield keyword. Like any other method call, when you use the yield keyword you can leave it as it is and call the block without any parameters. Or, if you wish, you can add a parameter list as you would with a method call.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">call_this_block</span>
+	<span class="k">yield</span>
+<span class="k">end</span>
+
+<span class="n">call_this_block</span> <span class="p">{</span> <span class="nb">puts</span> <span class="s2">"tweet"</span> <span class="p">}</span></code></pre></figure>
+
+<h4 id="optional-block">Optional Block</h4>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Optional</span>
+	<span class="k">def</span> <span class="nf">initialize</span>
+	   <span class="k">yield</span> <span class="nb">self</span> <span class="k">if</span> <span class="nb">block_given?</span>
+	<span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
+
+<h2 id="procs">Procs</h2>
+<p>Proc objects are blocks of code that have been bound to a set of local variables. Once bound, the code may be called in different contexts and still access those variables.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">gen_times</span><span class="p">(</span><span class="n">factor</span><span class="p">)</span>
+  <span class="k">return</span> <span class="no">Proc</span><span class="p">.</span><span class="nf">new</span> <span class="p">{</span><span class="o">|</span><span class="n">n</span><span class="o">|</span> <span class="n">n</span><span class="o">*</span><span class="n">factor</span> <span class="p">}</span>
+<span class="k">end</span>
+
+<span class="n">times3</span> <span class="o">=</span> <span class="n">gen_times</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">times5</span> <span class="o">=</span> <span class="n">gen_times</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="n">times3</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>               <span class="c1">#=&gt; 36</span>
+<span class="n">times5</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>                <span class="c1">#=&gt; 25</span>
+<span class="n">times3</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="n">times5</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>   <span class="c1">#=&gt; 60</span></code></pre></figure>
+
+<h2 id="lambdas">Lambdas</h2>
+<p>You may have heard of lambdas before. Perhaps you’ve used them in other languages. Despite the fancy name, a lambda is just a function… peculiarly… without a name. They’re anonymous, little functional spies sneaking into the rest of your code. Lambdas in Ruby are also objects, just like everything else! The last expression of a lambda is its return value, just like regular functions. As boring and familiar as that all sounds, it gives us a lot of power.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">my_proc</span> <span class="o">=</span> <span class="nb">lambda</span> <span class="p">{</span> <span class="nb">puts</span> <span class="s2">"tweet"</span> <span class="p">}</span>
+<span class="n">my_proc</span><span class="p">.</span><span class="nf">call</span> <span class="c1"># =&gt; tweet</span></code></pre></figure>
+
+<h4 id="multiple-lambdas">Multiple Lambdas</h4>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Comment</span>
+	<span class="k">def</span> <span class="nf">post</span><span class="p">(</span>
+		<span class="k">if</span> <span class="n">authenticate?</span><span class="p">(</span><span class="vi">@user</span><span class="p">,</span> <span class="vi">@password</span><span class="p">)</span>
+		 	<span class="c1"># submit the comment</span>
+			<span class="n">success</span>
+			<span class="n">success</span><span class="p">.</span><span class="nf">call</span>
+		<span class="k">else</span>
+			<span class="n">error</span><span class="p">.</span><span class="nf">call</span>
+		<span class="k">end</span>
+	<span class="k">end</span>
+<span class="k">end</span>
+
+
+<span class="n">comment</span>   <span class="o">=</span> <span class="no">Comment</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="s1">'Yeeeeeep!'</span><span class="p">)</span>
+<span class="n">success</span> <span class="o">=</span> <span class="o">-&gt;</span> <span class="p">{</span> <span class="nb">puts</span> <span class="s2">"Sent!"</span> <span class="p">}</span>
+<span class="n">error</span>   <span class="o">=</span> <span class="o">-&gt;</span> <span class="p">{</span> <span class="k">raise</span> <span class="s1">'Auth Error'</span> <span class="p">}</span>
+<span class="n">comment</span><span class="p">.</span><span class="nf">post</span><span class="p">(</span><span class="n">success</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span></code></pre></figure>
+
+<h4 id="lambda-to-block">Lambda to Block</h4>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">blablas</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"First"</span><span class="p">,</span> <span class="s2">"Second"</span><span class="p">]</span>
+<span class="n">blablas</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">blabla</span><span class="o">|</span>
+<span class="nb">puts</span> <span class="n">blabla</span>					<span class="c1">#Lets try converting to a proc</span>
+<span class="k">end</span>
+
+<span class="n">blablas</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"First"</span><span class="p">,</span> <span class="s2">"Second"</span><span class="p">]</span>
+<span class="n">printer</span> <span class="o">=</span> <span class="nb">lambda</span> <span class="p">{</span> <span class="o">|</span><span class="n">blabla</span><span class="o">|</span> <span class="nb">puts</span> <span class="n">blabla</span> <span class="p">}</span>
+
+<span class="n">blablas</span><span class="p">.</span><span class="nf">each</span><span class="p">(</span><span class="o">&amp;</span><span class="n">printer</span><span class="p">)</span>       
+
+<span class="c1">#‘&amp;’ turns proc into block </span>
+<span class="c1">#because each expects a block, not a proc </span>
+								</code></pre></figure>
+
+<hr />
+:ET
