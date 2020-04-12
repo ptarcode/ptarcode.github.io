@@ -3,6 +3,7 @@ layout: post
 title: "Rails 4 Turbolinks"
 date: 2013-11-26 23:36
 comments: true
+tags: [code, rails] 
 categories: Rails
 keywords: "rails 4, rails turbolinks, turbolinks"
 description: "Rails 4 Turbolinks"

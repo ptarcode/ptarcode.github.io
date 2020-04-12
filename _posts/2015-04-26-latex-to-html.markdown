@@ -3,7 +3,8 @@ layout: post
 title: "Latex to Html"
 date: 2015-04-26 18:51
 comments: true
-categories:
+tags: [latex]
+categories: code
 keywords: "latex, latex to html, latex html"
 description: 
 ---

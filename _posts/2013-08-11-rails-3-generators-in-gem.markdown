@@ -3,6 +3,7 @@ layout: post
 title: "Rails 3 generators in gem"
 date: 2013-08-11 18:02
 comments: true
+tags: [code, rubyOnRails, gems]
 categories: Rails
 
 keywords: "rails 3, rails generators, gem , github, rails generators gem"

@@ -3,6 +3,7 @@ layout: post
 title: "Blocks, Procs e Lambdas"
 date: 2013-08-21 22:35
 comments: true
+tags: [code, rubyOnRails]
 categories: Ruby
 keywords: "blocks, procs, lambdas, ruby"
 description: "Blocks, Procs e Lambdas"

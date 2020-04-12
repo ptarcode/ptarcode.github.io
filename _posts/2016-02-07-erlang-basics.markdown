@@ -3,7 +3,8 @@ layout: post
 title: "Erlang Basics"
 date: 2016-02-07 20:07
 comments: true
-categories: 
+tags: [dev, erlang]
+categories: dev
 keywords: 
 description: 
 ---

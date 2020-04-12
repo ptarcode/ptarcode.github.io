@@ -3,6 +3,7 @@ layout: post
 title: "Gem previsao-clima-tempo"
 date: 2013-08-17 00:00
 comments: true
+tags: [code, rubyOnRails, gems]
 categories: [Rails, Gems]
 keywords: "clima tempo, clima-tempo, gem clima tempo, gem clima-tempo, previsao tempo, previsao-clima-tempo, gem" 
 description: "Gem Communication with Clima Tempo accessing information about the weather of Brazil."
