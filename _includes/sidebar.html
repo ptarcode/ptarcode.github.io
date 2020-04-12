@@ -64,20 +64,23 @@
   <span class="icon-border"></span>
   {% endif %}
 
-  <a href="https://github.com/{{ site.github.username }}" target="_blank">
+  <a href="https://github.com/{{ site.github.username }}" target="_blank" data-toggle="tooltip" title="Github">
     <i class="fab fa-github-alt"></i>
   </a>
-  <a href="https://twitter.com/{{ site.twitter.username }}" target="_blank">
+  <a href="https://twitter.com/{{ site.twitter.username }}" target="_blank" data-toggle="tooltip" title="Twitter">
     <i class="fab fa-twitter"></i>
   </a>
-  <a href="https://www.linkedin.com/in/paulodetarco/" target="_blank">
+  <a href="https://www.linkedin.com/in/paulodetarco/" target="_blank" data-toggle="tooltip" title="Linkedin">
     <i class="fab fa-linkedin"></i>
   </a>
+  <a href="http://lattes.cnpq.br/2474826232804293" target="_blank" data-toggle="tooltip" title="CV Lattes">
+    <i class="fab fa-creative-commons-share"></i>
+  </a>
   {% assign email = site.social.email | split: '@' %}
-  <a href="javascript:window.open('mailto:' + ['{{ email[0] }}','{{ email[1] }}'].join('@'))">
+  <a href="javascript:window.open('mailto:' + ['{{ email[0] }}','{{ email[1] }}'].join('@'))"  data-toggle="tooltip" title="Email">
     <i class="fas fa-envelope"></i>
   </a>
-  <a href="{{ site.baseurl }}/feed.xml" target="_blank">
+  <a href="{{ site.baseurl }}/feed.xml" target="_blank"  data-toggle="tooltip" title="RSS">
     <i class="fas fa-rss"></i>
   </a>
 
