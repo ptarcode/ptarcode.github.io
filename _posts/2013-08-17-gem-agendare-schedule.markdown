@@ -1,13 +1,16 @@
 ---
 layout: post
-title: "Gem agendare-schedule"
+title: Gem agendare-schedule
 date: 2013-08-17 12:22
 comments: true
 tags: [ruby]
 categories: [Ruby on Rails, Gems]
-keywords: "agendare schedule, agendare-schedule, gem agendare schedule, gem agendare-schedule, agendar, gem schedule, gem" 
-description: "The basic structure to implement schedule project. You have 3 objects to implement yours views, because the logic is implemented in this gem."
- 
+keywords: agendare schedule, agendare-schedule, gem agendare schedule, gem agendare-schedule,
+  agendar, gem schedule, gem
+description: The basic structure to implement schedule project. You have 3 objects
+  to implement yours views, because the logic is implemented in this gem.
+seo:
+  date_modified: 2020-05-12 19:35:06 -0300
 ---
 ---
 

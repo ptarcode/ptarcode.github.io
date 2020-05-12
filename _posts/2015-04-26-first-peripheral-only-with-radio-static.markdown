@@ -1,12 +1,14 @@
 ---
 layout: post
-title: "First peripheral only with radio static."
+title: First peripheral only with radio static.
 date: 2015-04-26 00:08
 comments: true
 tags: [history]
 categories: [History]
-keywords: "history of computer, homebrew, altair"
-description: 
+keywords: history of computer, homebrew, altair
+description:
+seo:
+  date_modified: 2020-05-12 19:35:06 -0300
 ---
 
 ---

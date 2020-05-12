@@ -1,12 +1,14 @@
 ---
 layout: post
-title: "Erlang Basics"
+title: Erlang Basics
 date: 2016-02-07 20:07
 comments: true
 tags: [erlang]
 categories: [Dev]
-keywords: 
-description: 
+keywords:
+description:
+seo:
+  date_modified: 2020-05-12 19:35:06 -0300
 ---
 
 <!--more-->

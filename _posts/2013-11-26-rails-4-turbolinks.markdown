@@ -1,12 +1,14 @@
 ---
 layout: post
-title: "Rails 4 Turbolinks"
+title: Rails 4 Turbolinks
 date: 2013-11-26 23:36
 comments: true
 tags: [ruby]
 categories: [Ruby on Rails]
-keywords: "rails 4, rails turbolinks, turbolinks"
-description: "Rails 4 Turbolinks"
+keywords: rails 4, rails turbolinks, turbolinks
+description: Rails 4 Turbolinks
+seo:
+  date_modified: 2020-05-12 19:35:06 -0300
 ---
 
 ---

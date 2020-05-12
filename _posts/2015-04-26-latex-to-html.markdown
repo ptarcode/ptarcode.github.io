@@ -1,12 +1,14 @@
 ---
 layout: post
-title: "Latex to Html"
+title: Latex to Html
 date: 2015-04-26 18:51
 comments: true
 tags: [latex]
 categories: [Code]
-keywords: "latex, latex to html, latex html"
-description: 
+keywords: latex, latex to html, latex html
+description:
+seo:
+  date_modified: 2020-05-12 19:35:06 -0300
 ---
 
 <!--more-->
