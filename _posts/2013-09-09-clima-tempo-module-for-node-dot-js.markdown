@@ -3,8 +3,8 @@ layout: post
 title: "Clima tempo module for Node.js"
 date: 2013-09-09 11:33
 comments: true
-tags: [code, nodeJs] 
-categories: code
+tags: [nodeJs]
+categories: [Code]
 keywords: "node.js,climatempo, climatempo node.js, climatempo module node.js, climatempo module"
 description: "Clima tempo module for Node.js"
 ---

@@ -3,8 +3,8 @@ layout: post
 title: "Writing and Publishing Node.js Modules"
 date: 2013-09-03 08:02
 comments: true
-tags: [code, nodeJs] 
-categories: Node.js
+tags: [nodeJs]
+categories: [Node]
 keywords: "node.js, node.js module, modulesnode.js, publish modules node.js, write modules node.js"
 description: "Writing and Publishing Node.js Modules"
 ---

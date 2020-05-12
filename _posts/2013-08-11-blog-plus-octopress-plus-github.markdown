@@ -4,7 +4,7 @@ title: "Blog + Octopress + GitHub"
 date: 2013-08-11 18:04
 comments: true
 categories: [Octopress, GitHub]
-
+tags: [jekyl]
 keywords: "blog, octopress, this, GitHub, Blog + Octopress + GitHub"
 description: "Blog + Octopress + GitHub"
 
