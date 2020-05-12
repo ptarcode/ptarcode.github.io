@@ -8,7 +8,7 @@ categories: [History]
 keywords: history of computer, homebrew, altair
 description:
 seo:
-  date_modified: 2020-05-12 19:35:06 -0300
+  date_modified: 2020-05-12 19:57:12 -0300
 ---
 
 ---
