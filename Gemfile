@@ -7,7 +7,7 @@ group :jekyll_plugins do
   gem "jekyll-paginate"
   gem "jekyll-redirect-from"
   gem "jekyll-seo-tag", "~> 2.6.1" 
-  #gem "github-pages", group: :jekyll_plugins
+  gem "jekyll-youtube"
 end
 
 group :test do
