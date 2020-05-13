@@ -14,6 +14,6 @@ seo:
 
 <!--more-->
 
- {% youtube "https://youtu.be/TaV-d7eKWFc" %}
+ {% include youtube.html id="TaV-d7eKWFc" %}
 
  ![Organizational Model](/assets/img/posts/ING_org_model.svgz)
