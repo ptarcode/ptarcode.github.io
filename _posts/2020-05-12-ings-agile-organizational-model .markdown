@@ -1,12 +1,12 @@
 ---
 layout: post
-title: INGs New Agile Organizational Model 
+title: ING's Agile Organizational Model 
 date: 2020-05-12 20:08
 comments: true
 categories: [agile]
 tags: [ings]
 keywords: ing's, agile
-description: INGs New Agile Organizational Model
+description: ING's Agile Organizational Model
 seo:
   date_modified: 2020-05-12 20:08:00 -0300
 ---
