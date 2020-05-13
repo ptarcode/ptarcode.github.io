@@ -1,0 +1,172 @@
+I"�9<!--more-->
+
+<p>Erlang is a programming language used to build massively scalable soft real-time systems with requirements on high availability. Some of its uses are in telecoms, banking, e-commerce, computer telephony and instant messaging. Erlang’s runtime system has built-in support for concurrency, distribution and fault tolerance.</p>
+
+<h3 id="history">History</h3>
+
+<p>The name “Erlang”, attributed to Bjarne Däcker, has been presumed by those working on the telephony switches (for whom the language was designed) to be a reference to Danish mathematician and engineer Agner Krarup Erlang or the ubiquitous use of the unit named for him, and (initially at least) simultaneously as a syllabic abbreviation of “Ericsson Language”.</p>
+
+<h5 id="1982---1985">1982 - 1985</h5>
+<p>Experiments with programming of telecom using &gt; 20 different languages. Conclusion: The language must be a very high level symbolic language in order to achive productivity gains ! (Leaves us with: Lisp , Prolog , Parlog …)</p>
+<h5 id="1985---1986">1985 - 1986</h5>
+<p>Experiments with Lisp,Prolog, Parlog etc. Conclusion: The language must contain primitives for concurrency and error recovery, and the execution model must not have back-tracking. (Rules out Lisp and Prolog.) It must also have a granularity of concurrency such that one asyncronous telephony process is represented by one process in the language. Rules out Parlog. We must therefore develop our own language with the desirable features of Lisp, Prolog and Parlog, but with concurrency and error recovery built into the language.</p>
+<h5 id="1987">1987</h5>
+<p>The first experiments with Erlang.</p>
+<h5 id="1988">1988</h5>
+<p>ACS/Dunder Phase 1. Prototype construction of PABX functionality by external users Erlang escapes from the lab!</p>
+<h5 id="1989">1989</h5>
+<p>ACS/Dunder Phase 2. Reconstruction of 1/10 of the complete MD-110 system. Results: » 10 times greater gains in efficency at construction compared with construction in PLEX!Further experiments with a fast implementation of Erlang.</p>
+<h5 id="1990">1990</h5>
+<p>Erlang is presented at ISS’90, which results in several new users, e.g Bellcore.</p>
+<h5 id="1991">1991</h5>
+<p>Fast implementation of Erlang is released to users. Erlang is represented at Telecom’91 . More functionality such as ASN1 - Compiler , graphical interface etc.</p>
+<h5 id="1992">1992</h5>
+<p>A lot of new users, e.g several RACE projects. Erlang is ported to VxWorks, PC, Macintosh etc. Three applications using Erlang are presented at ISS’92. The two first product projects using Erlang are started.</p>
+<h5 id="1993">1993</h5>
+<p>Distribution is added to Erlang, which makes it possible to run a homgeneous Erlang system on a heterogeneous hardware. Decision to sell implementations Erlang externally. Separate organization in Ericsson started to maintain and support Erlang implementations and Erlang Tools.</p>
+
+<h3 id="installation">Installation</h3>
+
+<p>Erlang Solutions offers a number of installs at http://www.erlang.org/downloads.
+Erlang/OTP Platform is a complex system composed of many smaller applications (modules). Installing the erlang package automatically installs the entire OTP suite. Since some of the more advanced users might want to download only a specific selection of modules, Erlang/OTP has been divided into smaller packages, all with the prefix ‘erlang-‘, that can be installed without launching the erlang package.</p>
+
+<p>Most OS package managers provide pre-built binary packages. You can also download the latest stable releases from Erlang Solutions or try install with package managers.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>For Homebrew on OS X: brew install erlang
+For MacPorts on OS X: port install erlang
+For Ubuntu and Debian: apt-get install erlang
+For Fedora: yum install erlang
+For FreeBSD: pkg install erlang
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="shell">Shell</h3>
+
+<p>On Windows command line type <strong>werl</strong> on Linux or Mac OS X type <strong>erl</strong>.</p>
+
+<figure class="highlight"><pre><code class="language-erlang" data-lang="erlang">    <span class="nv">Erlang</span><span class="o">/</span><span class="nv">OTP</span> <span class="mi">18</span> <span class="p">[</span><span class="n">erts</span><span class="o">-</span><span class="mi">7</span><span class="p">.</span><span class="mi">2</span><span class="p">]</span> <span class="p">[</span><span class="n">source</span><span class="o">-</span><span class="n">e6dd627</span><span class="p">]</span> <span class="p">[</span><span class="mi">64</span><span class="o">-</span><span class="n">bit</span><span class="p">]</span> <span class="p">[</span><span class="nn">smp</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="p">[</span><span class="n">async</span><span class="o">-</span><span class="nn">threads</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span> <span class="p">[</span><span class="n">hipe</span><span class="p">]</span> <span class="p">[</span><span class="n">kernel</span><span class="o">-</span><span class="nn">poll</span><span class="p">:</span><span class="n">false</span><span class="p">]</span>
+
+    <span class="nv">Eshell</span> <span class="nv">V7</span><span class="p">.</span><span class="mi">2</span>  <span class="p">(</span><span class="n">abort</span> <span class="n">with</span> <span class="err">^</span><span class="nv">G</span><span class="p">)</span>
+    <span class="mi">1</span><span class="o">&gt;</span></code></pre></figure>
+
+<h4 id="browsing-the-archives">Browsing the archives</h4>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">pwd</span><span class="p">().</span> 
+<span class="nf">/</span><span class="no">Users</span><span class="o">/</span><span class="n">ptarcode</span> 
+<span class="n">ok</span></code></pre></figure>
+
+<p>Argument in parentheses but in quotes, preferably double quotes.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="mi">5</span><span class="o">&gt;</span> <span class="n">cd</span><span class="p">(</span><span class="s2">".."</span><span class="p">).</span>
+<span class="nf">/</span><span class="no">Users</span>
+<span class="n">ok</span>
+<span class="mi">6</span><span class="o">&gt;</span> <span class="n">cd</span><span class="p">(</span><span class="s2">"ptarcode"</span><span class="p">).</span> <span class="nf">/</span><span class="no">Users</span><span class="o">/</span><span class="n">ptarcode</span>
+<span class="n">ok</span>
+<span class="mi">7</span><span class="o">&gt;</span></code></pre></figure>
+
+<h4 id="doing-">Doing …</h4>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Eshell</span> <span class="no">V5</span><span class="o">.</span><span class="mi">9</span> <span class="p">(</span><span class="nb">abort</span> <span class="n">with</span> <span class="o">^</span><span class="no">G</span><span class="p">)</span> <span class="mi">1</span><span class="o">&gt;</span> <span class="mi">2</span><span class="o">+</span><span class="mi">2</span><span class="o">.</span>
+<span class="mi">4</span>
+<span class="mi">2</span><span class="o">&gt;</span> <span class="mi">39</span><span class="o">-</span><span class="mi">9</span><span class="o">.</span>
+<span class="mi">30</span>
+<span class="mi">3</span><span class="o">&gt;</span> <span class="mi">10</span><span class="o">*</span><span class="mi">43</span><span class="o">.</span>
+<span class="mi">430</span>
+<span class="mi">4</span><span class="o">&gt;</span> <span class="mi">100</span> <span class="n">div</span> <span class="mi">15</span><span class="o">.</span>
+<span class="mi">6</span>
+<span class="mi">6</span><span class="o">&gt;</span> <span class="mi">100</span> <span class="n">rem</span> <span class="mi">15</span><span class="o">.</span>
+<span class="mi">10</span>
+<span class="mi">7</span><span class="o">&gt;</span> <span class="mi">3</span><span class="o">*</span><span class="p">(</span><span class="mi">5</span><span class="o">+</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span>
+<span class="mi">24</span></code></pre></figure>
+
+<h4 id="functions-">Functions …</h4>
+
+<p>Mathematical functions supported by Erlang’s math module simple examples.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="mi">4</span><span class="o">&gt;</span> <span class="n">math</span><span class="ss">:pi</span><span class="p">()</span><span class="o">.</span> 
+<span class="mf">3.141592653589793</span>
+
+<span class="mi">5</span><span class="o">&gt;</span> <span class="n">math</span><span class="ss">:cos</span><span class="p">(</span><span class="n">math</span><span class="ss">:pi</span><span class="p">()).</span>
+<span class="nf">-</span><span class="mf">1.0</span></code></pre></figure>
+
+<h4 id="numbers">Numbers</h4>
+
+<p>Erlang recognizes integers and floating-point numbers. Uses the 64-bit IEEE 754-1985 “double precision” representation. This means that it keeps track of about 15 decimal digits plus an exponent.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="mi">7</span><span class="o">&gt;</span> <span class="mf">8888888888888888888888888888888888888888888.0</span><span class="o">.</span> 
+<span class="mf">8.888888888888889e42</span>
+
+<span class="mi">9</span><span class="o">&gt;</span> <span class="mf">88888888888.88888888888888</span> <span class="o">.</span>
+<span class="mf">88888888888.88889</span></code></pre></figure>
+
+<p>Digits+Exponent notation</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="mi">7</span><span class="o">&gt;</span> <span class="mf">2.923e127</span><span class="o">.</span> <span class="mf">2.923e127</span>
+<span class="mi">8</span><span class="o">&gt;</span> <span class="mf">7.6345435e-231</span><span class="o">.</span> <span class="mf">7.6345435e-231</span></code></pre></figure>
+
+<p>Base2+Value notation</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="mi">11</span><span class="o">&gt;</span> <span class="mi">2</span><span class="c1">#10101. </span>
+<span class="mi">21</span>
+<span class="mi">12</span><span class="o">&gt;</span> <span class="o">-</span><span class="mi">2</span><span class="c1">#10101. </span>
+<span class="o">-</span><span class="mi">21</span></code></pre></figure>
+
+<p>Base16+Value notation</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="mi">16</span><span class="o">&gt;</span> <span class="mi">16</span><span class="c1">#fa81.</span>
+<span class="mi">64129</span>
+<span class="mi">17</span><span class="o">&gt;</span> <span class="o">-</span><span class="mi">16</span><span class="c1">#fa81.</span>
+<span class="o">-</span><span class="mi">64129</span></code></pre></figure>
+
+<h4 id="variables">Variables</h4>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="mi">19</span><span class="o">&gt;</span> <span class="no">V</span><span class="o">=</span><span class="mi">3</span> <span class="o">.</span>
+<span class="mi">3</span></code></pre></figure>
+
+<p>Variable can’t be signed with a new value.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="mi">20</span><span class="o">&gt;</span> <span class="no">V</span><span class="o">=</span><span class="mi">4</span> <span class="p">.</span>
+<span class="nf">*</span><span class="o">*</span> <span class="n">exception</span> <span class="ss">error: </span><span class="n">no</span> <span class="n">match</span> <span class="n">of</span> <span class="n">right</span> <span class="n">hand</span> <span class="n">side</span> <span class="n">value</span> <span class="mi">4</span>
+<span class="mi">21</span><span class="o">&gt;</span> 
+
+<span class="mi">21</span><span class="o">&gt;</span> <span class="no">V2</span><span class="o">=</span> <span class="no">V</span><span class="o">*</span><span class="mi">4</span> <span class="o">.</span>
+<span class="mi">12</span>
+<span class="mi">22</span><span class="o">&gt;</span> <span class="no">V2</span> <span class="o">.</span>
+<span class="mi">12</span></code></pre></figure>
+
+<p>Show bounded variables **b() . **</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="mi">23</span><span class="o">&gt;</span> <span class="n">b</span><span class="p">()</span> <span class="o">.</span>
+<span class="no">V</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="no">V2</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">ok</span></code></pre></figure>
+
+<p>Clearing bounded variables **f(variable) . **</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="mi">23</span><span class="o">&gt;</span> <span class="n">b</span><span class="p">()</span> <span class="o">.</span>
+<span class="no">V</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="no">V2</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">ok</span>
+<span class="mi">24</span><span class="o">&gt;</span> <span class="n">f</span><span class="p">(</span><span class="no">V</span><span class="p">)</span> <span class="p">.</span>
+<span class="nf">ok</span>
+<span class="mi">25</span><span class="o">&gt;</span> <span class="n">b</span><span class="p">()</span> <span class="o">.</span> 
+<span class="no">V2</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">ok</span></code></pre></figure>
+
+<p>Clearing all bounded variables **f() . **</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="mi">23</span><span class="o">&gt;</span> <span class="n">b</span><span class="p">()</span> <span class="o">.</span>
+<span class="no">V</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="no">V2</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">ok</span>
+<span class="mi">24</span><span class="o">&gt;</span> <span class="n">f</span><span class="p">()</span> <span class="p">.</span>
+<span class="nf">ok</span>
+<span class="mi">25</span><span class="o">&gt;</span> <span class="n">b</span><span class="p">()</span> <span class="p">.</span>
+<span class="nf">ok</span></code></pre></figure>
+
+<p>Continue …</p>
+:ET

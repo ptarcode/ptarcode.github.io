@@ -1,0 +1,277 @@
+I"Ü
+<div class="card categories">
+    <!-- top-category -->
+    <div class="card-header d-flex justify-content-between hide-border-bottom" id="h_Code">
+      <span>
+      
+        <i class="far fa-folder fa-fw"></i>
+      
+        <a href="/categories/code/">Code</a>
+        <!-- content count -->
+        
+        <span class="text-muted small font-weight-light pl-2">
+        
+          2
+          posts
+        </span>
+      </span>
+
+      <!-- arrow -->
+      <a href="#l_Code" data-toggle="collapse" aria-expanded="true" class="category-trigger hide-border-bottom">
+        
+        <i class="fas fa-fw fa-angle-right disabled"></i>
+        
+      </a>
+
+    </div> <!-- .card-header -->
+
+    <!-- Sub-categories -->
+    
+
+  </div>
+<p><!-- .card --></p>
+
+<div class="card categories">
+    <!-- top-category -->
+    <div class="card-header d-flex justify-content-between hide-border-bottom" id="h_Dev">
+      <span>
+      
+        <i class="far fa-folder fa-fw"></i>
+      
+        <a href="/categories/dev/">Dev</a>
+        <!-- content count -->
+        
+        <span class="text-muted small font-weight-light pl-2">
+        
+          1
+          post
+        </span>
+      </span>
+
+      <!-- arrow -->
+      <a href="#l_Dev" data-toggle="collapse" aria-expanded="true" class="category-trigger hide-border-bottom">
+        
+        <i class="fas fa-fw fa-angle-right disabled"></i>
+        
+      </a>
+
+    </div> <!-- .card-header -->
+
+    <!-- Sub-categories -->
+    
+
+  </div>
+<p><!-- .card --></p>
+
+<div class="card categories">
+    <!-- top-category -->
+    <div class="card-header d-flex justify-content-between hide-border-bottom" id="h_History">
+      <span>
+      
+        <i class="far fa-folder fa-fw"></i>
+      
+        <a href="/categories/history/">History</a>
+        <!-- content count -->
+        
+        <span class="text-muted small font-weight-light pl-2">
+        
+          1
+          post
+        </span>
+      </span>
+
+      <!-- arrow -->
+      <a href="#l_History" data-toggle="collapse" aria-expanded="true" class="category-trigger hide-border-bottom">
+        
+        <i class="fas fa-fw fa-angle-right disabled"></i>
+        
+      </a>
+
+    </div> <!-- .card-header -->
+
+    <!-- Sub-categories -->
+    
+
+  </div>
+<p><!-- .card --></p>
+
+<div class="card categories">
+    <!-- top-category -->
+    <div class="card-header d-flex justify-content-between hide-border-bottom" id="h_Node">
+      <span>
+      
+        <i class="far fa-folder fa-fw"></i>
+      
+        <a href="/categories/node/">Node</a>
+        <!-- content count -->
+        
+        <span class="text-muted small font-weight-light pl-2">
+        
+          1
+          post
+        </span>
+      </span>
+
+      <!-- arrow -->
+      <a href="#l_Node" data-toggle="collapse" aria-expanded="true" class="category-trigger hide-border-bottom">
+        
+        <i class="fas fa-fw fa-angle-right disabled"></i>
+        
+      </a>
+
+    </div> <!-- .card-header -->
+
+    <!-- Sub-categories -->
+    
+
+  </div>
+<p><!-- .card --></p>
+
+<div class="card categories">
+    <!-- top-category -->
+    <div class="card-header d-flex justify-content-between hide-border-bottom" id="h_Ruby">
+      <span>
+      
+        <i class="far fa-folder fa-fw"></i>
+      
+        <a href="/categories/ruby/">Ruby</a>
+        <!-- content count -->
+        
+        <span class="text-muted small font-weight-light pl-2">
+        
+          1
+          post
+        </span>
+      </span>
+
+      <!-- arrow -->
+      <a href="#l_Ruby" data-toggle="collapse" aria-expanded="true" class="category-trigger hide-border-bottom">
+        
+        <i class="fas fa-fw fa-angle-right disabled"></i>
+        
+      </a>
+
+    </div> <!-- .card-header -->
+
+    <!-- Sub-categories -->
+    
+
+  </div>
+<p><!-- .card --></p>
+
+<div class="card categories">
+    <!-- top-category -->
+    <div class="card-header d-flex justify-content-between hide-border-bottom" id="h_Ruby on Rails">
+      <span>
+      
+        <i class="far fa-folder-open fa-fw"></i>
+      
+        <a href="/categories/ruby-on-rails/">Ruby on Rails</a>
+        <!-- content count -->
+        
+        <span class="text-muted small font-weight-light pl-2">
+        
+          1
+          category,
+        
+          4
+          posts
+        </span>
+      </span>
+
+      <!-- arrow -->
+      <a href="#l_Ruby on Rails" data-toggle="collapse" aria-expanded="true" class="category-trigger hide-border-bottom">
+        
+        <i class="fas fa-fw fa-angle-down"></i>
+        
+      </a>
+
+    </div> <!-- .card-header -->
+
+    <!-- Sub-categories -->
+    
+    <div id="l_Ruby on Rails" class="collapse show" aria-expanded="true">
+      <ul class="list-group">
+        
+        <li class="list-group-item">
+          <i class="far fa-folder fa-fw"></i>&nbsp;<a href="/categories/gems/">Gems</a>
+          
+          <span class="text-muted small font-weight-light pl-2">2
+            posts
+          </span>
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+<p><!-- .card --></p>
+
+<div class="card categories">
+    <!-- top-category -->
+    <div class="card-header d-flex justify-content-between hide-border-bottom" id="h_agile">
+      <span>
+      
+        <i class="far fa-folder fa-fw"></i>
+      
+        <a href="/categories/agile/">agile</a>
+        <!-- content count -->
+        
+        <span class="text-muted small font-weight-light pl-2">
+        
+          1
+          post
+        </span>
+      </span>
+
+      <!-- arrow -->
+      <a href="#l_agile" data-toggle="collapse" aria-expanded="true" class="category-trigger hide-border-bottom">
+        
+        <i class="fas fa-fw fa-angle-right disabled"></i>
+        
+      </a>
+
+    </div> <!-- .card-header -->
+
+    <!-- Sub-categories -->
+    
+
+  </div>
+<p><!-- .card --></p>
+
+<div class="card categories">
+    <!-- top-category -->
+    <div class="card-header d-flex justify-content-between hide-border-bottom" id="h_devops">
+      <span>
+      
+        <i class="far fa-folder fa-fw"></i>
+      
+        <a href="/categories/devops/">devops</a>
+        <!-- content count -->
+        
+        <span class="text-muted small font-weight-light pl-2">
+        
+          1
+          post
+        </span>
+      </span>
+
+      <!-- arrow -->
+      <a href="#l_devops" data-toggle="collapse" aria-expanded="true" class="category-trigger hide-border-bottom">
+        
+        <i class="fas fa-fw fa-angle-right disabled"></i>
+        
+      </a>
+
+    </div> <!-- .card-header -->
+
+    <!-- Sub-categories -->
+    
+
+  </div>
+<p><!-- .card --></p>
+
+<script src="/assets/js/dist/category-collapse.min.js" async=""></script>
+
+:ET

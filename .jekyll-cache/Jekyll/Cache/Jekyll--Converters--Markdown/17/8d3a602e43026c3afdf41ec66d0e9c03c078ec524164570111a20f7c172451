@@ -1,0 +1,101 @@
+I"#<!--more-->
+
+<h3 id="mathjax">MathJax</h3>
+<p>Perfect to render equations but don’t have structures support like tables and lists.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="n">html</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="no">MathJax</span> <span class="no">TeX</span> <span class="no">Test</span> <span class="no">Page</span><span class="o">&lt;</span><span class="sr">/title&gt;
+&lt;script type="text/x</span><span class="o">-</span><span class="n">mathjax</span><span class="o">-</span><span class="n">config</span><span class="s2">"&gt;
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['</span><span class="se">\\</span><span class="s2">(','</span><span class="se">\\</span><span class="s2">)']]}});
+&lt;/script&gt;
+&lt;script type="</span><span class="n">text</span><span class="o">/</span><span class="n">javascript</span><span class="s2">"
+  src="</span><span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">cdn</span><span class="p">.</span><span class="nf">mathjax</span><span class="p">.</span><span class="nf">org</span><span class="o">/</span><span class="n">mathjax</span><span class="o">/</span><span class="n">latest</span><span class="o">/</span><span class="no">MathJax</span><span class="p">.</span><span class="nf">js?</span><span class="n">config</span><span class="o">=</span><span class="no">TeX</span><span class="o">-</span><span class="no">AMS</span><span class="o">-</span><span class="no">MML_HTMLorMML</span><span class="s2">"&gt;
+&lt;/script&gt;
+&lt;/head&gt;</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
+<span class="no">When</span> <span class="vg">$a</span> <span class="p">\</span><span class="n">ne</span> <span class="mi">0</span><span class="vg">$,</span> <span class="n">there</span> <span class="n">are</span> <span class="n">two</span> <span class="n">solutions</span> <span class="n">to</span> <span class="p">\(</span><span class="n">ax</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">bx</span> <span class="o">+</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span><span class="p">\)</span> <span class="n">and</span> <span class="n">they</span> <span class="n">are</span>
+<span class="vg">$$</span><span class="n">x</span> <span class="o">=</span> <span class="p">{</span><span class="o">-</span><span class="n">b</span> <span class="p">\</span><span class="n">pm</span> <span class="p">\</span><span class="n">sqrt</span><span class="p">{</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="o">-</span><span class="mi">4</span><span class="n">ac</span><span class="p">}</span> <span class="p">\</span><span class="n">over</span> <span class="mi">2</span><span class="n">a</span><span class="p">}</span><span class="o">.</span><span class="vg">$$</span>
+<span class="o">&lt;</span><span class="sr">/body&gt;</span></code></pre></figure>
+
+<h5 id="saiba-mais-em-httpwwwmathjaxorg">Saiba mais em http://www.mathjax.org/.</h5>
+
+<h3 id="latex2html5">Latex2html5</h3>
+
+<p>This project is the frontend only version of the code that originated from Mathapedia to enable real-time, dynamic authorship of mathematical ebooks</p>
+
+<script type="text/x-mathjax-config">
+    // <![CDATA[
+    MathJax.Hub.Config({ 
+        TeX: {extensions: ["AMSmath.js", "AMSsymbols.js"]},     
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+        showProcessingMessages : false,
+        messageStyle : "none" ,    
+        showMathMenu: false ,
+        tex2jax: {
+            processEnvironments: true,
+            inlineMath: [ ['$','$'], ["\(","\)"] ],
+            displayMath: [ ['$$','$$'], ["\[","\]"] ],
+            preview : "none",
+            processEscapes: true
+        },
+        "HTML-CSS": { linebreaks: { automatic:true, width: "latex-container"} }
+    });
+    // ]]>
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<p>LaTeX2HTML5 Installation</p>
+
+<p>Simply download the JS and CSS files and include them on your MathJax enabled website:
+     <link rel="stylesheet" href="latex2html5.min.css" /> 
+     <script type="text/javascript" src="latex2html5.min.js"></script></p>
+
+<p>If you want the same font as the rendered examples:</p>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arbutus+Slab" type="text/css" />
+
+<p>You have three options for parsing the LATEX:
+You can put LATEX inside of the current page within a script tag with the type set to “tex/latex”:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">            <span class="o">&lt;</span><span class="n">script</span> <span class="n">type</span><span class="o">=</span><span class="s2">"tex/latex"</span><span class="o">&gt;</span>
+                <span class="o">...</span> <span class="no">LaTeX</span> <span class="n">here</span> <span class="o">...</span>
+            <span class="o">&lt;</span><span class="sr">/script&gt;
+            &lt;script type="text/</span><span class="n">javascript</span><span class="s2">"&gt;
+                $('body').latex();
+            &lt;/script&gt;
+            </span></code></pre></figure>
+
+<p>or you can read a .tex file from somewhere else, which is nice for editing .tex files:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">            <span class="o">&lt;</span><span class="n">latex</span> <span class="n">src</span><span class="o">=</span><span class="s2">"path/to/my/latex.tex"</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="n">script</span> <span class="n">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="o">&gt;</span>
+                <span class="err">$</span><span class="p">(</span><span class="s1">'latex'</span><span class="p">)</span><span class="o">.</span><span class="no">LaTeX</span><span class="p">();</span>
+            <span class="o">&lt;</span><span class="sr">/script&gt;</span></code></pre></figure>
+
+<p>or you can write it from scratch!</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">  <span class="no">MathJax</span><span class="o">.</span><span class="no">Hub</span><span class="o">.</span><span class="no">Register</span><span class="o">.</span><span class="no">StartupHook</span><span class="p">(</span><span class="s2">"End"</span><span class="p">,</span><span class="n">function</span> <span class="p">()</span> <span class="p">{</span>
+
+      <span class="err">$</span><span class="p">(</span><span class="s1">'[type="tex/latex"]'</span><span class="p">).</span><span class="nf">each</span><span class="p">(</span><span class="n">function</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">el</span><span class="p">)</span> <span class="p">{</span>
+          <span class="n">var</span> <span class="vg">$el</span> <span class="o">=</span> <span class="err">$</span><span class="p">(</span><span class="n">el</span><span class="p">);</span>
+          <span class="n">var</span> <span class="no">TEX</span> <span class="o">=</span> <span class="n">new</span> <span class="no">LaTeX2HTML5</span><span class="o">.</span><span class="no">TeX</span><span class="p">({</span>
+              <span class="ss">tagName: </span><span class="s1">'section'</span><span class="p">,</span>
+              <span class="ss">className: </span><span class="s1">'latex-container'</span><span class="p">,</span>
+              <span class="ss">latex: </span><span class="vg">$el</span><span class="p">.</span><span class="nf">text</span><span class="p">()</span>
+          <span class="p">});</span>
+          <span class="no">TEX</span><span class="p">.</span><span class="nf">render</span><span class="p">();</span>
+          <span class="vg">$el</span><span class="p">.</span><span class="nf">replaceWith</span><span class="p">(</span><span class="no">TEX</span><span class="o">.</span><span class="vg">$el</span><span class="p">);</span>
+      <span class="p">});</span>
+      
+  <span class="p">});</span>
+  </code></pre></figure>
+
+<p>Examples:</p>
+
+<h5 id="pstricks---httplatex2html5comexamplespstrickshtml">pstricks 	 http://latex2html5.com/examples/pstricks.html</h5>
+<h5 id="interactive-httplatex2html5comexamplesinteractivehtml">interactive http://latex2html5.com/examples/interactive.html</h5>
+<h5 id="graphs---httplatex2html5comexamplesgraphshtml">graphs		 http://latex2html5.com/examples/graphs.html</h5>
+:ET

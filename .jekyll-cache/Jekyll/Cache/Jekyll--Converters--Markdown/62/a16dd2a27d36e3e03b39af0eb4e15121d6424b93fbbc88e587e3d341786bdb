@@ -1,0 +1,40 @@
+I"
+
+<div id="tags" class="d-flex flex-wrap ml-xl-2 mr-xl-2">
+
+
+
+
+
+
+  <div>
+    <a class="tag" href="/tags/books/">books<span class="text-muted">1</span></a>
+  </div>
+
+  <div>
+    <a class="tag" href="/tags/computer/">computer<span class="text-muted">1</span></a>
+  </div>
+
+  <div>
+    <a class="tag" href="/tags/erlang/">erlang<span class="text-muted">1</span></a>
+  </div>
+
+  <div>
+    <a class="tag" href="/tags/ings/">ings<span class="text-muted">1</span></a>
+  </div>
+
+  <div>
+    <a class="tag" href="/tags/latex/">latex<span class="text-muted">1</span></a>
+  </div>
+
+  <div>
+    <a class="tag" href="/tags/nodejs/">nodeJs<span class="text-muted">2</span></a>
+  </div>
+
+  <div>
+    <a class="tag" href="/tags/ruby/">ruby<span class="text-muted">5</span></a>
+  </div>
+
+
+</div>
+:ET
