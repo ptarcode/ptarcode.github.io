@@ -4,7 +4,7 @@ title: DevOps Books
 date: 2020-05-13 20:00
 comments: true
 categories: [devops]
-tags: [books]
+tags: [books,devops]
 keywords: devops, books, devops books
 description: DevOps Books
 seo:
